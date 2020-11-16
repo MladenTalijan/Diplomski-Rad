@@ -15,12 +15,37 @@ and open the template in the editor.
           background-color: gray;
           padding: 10px;
         }  
+        ul{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            background-color: black;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            padding: 14px 18px;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        li a:hover{
+            background-color: gray;
+        }
+        .header{
+            margin-left: -10px;
+            margin-right: -10px;
+        }
     </style>
+    
 <title>Diplomski rad</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+<div class="header">
    <div class="title">Servis za diplomske radove</div>
    <div class="menu">
        <ul>
@@ -31,5 +56,6 @@ and open the template in the editor.
            <li><a href="">Ažuriraj diplomski rad</a></li>
        </ul>   
     </div>
+</div>
 </body>
 </html>
