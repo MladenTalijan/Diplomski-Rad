@@ -32,34 +32,66 @@
                 var nameLastnameMStatus;
                 
                 var nameMsg;
-                var nameLastNameMsg;
+                var nameLastnameMsg;
                 var brojIndeksaMsg;
                 var smerMsg;
                 var nameLastnameMMsg;
-                
+                    
+                    //ne radi da izbrise nakon unosa 17:54
+                    if(document.getElementById("nameMsg").innerHTML  !== ""){
+                        document.getElementById("nameMsg").innerHTML = "";
+                    }
+                    if(document.getElementById("nameLastnameMsg").innerHTML  !== ""){
+                        document.getElementById("nameLastnameMsg").innerHTML = "";
+                    }
+                    if(document.getElementById("brojIndeksaMsg").innerHTML  !== ""){
+                        document.getElementById("brojIndeksaMsg").innerHTML = "";
+                    }
+                    if(document.getElementById("smerMsg").innerHTML  !== ""){
+                        document.getElementById("smerMsg").innerHTML = "";
+                    }
+                    if(document.getElementById("nameLastnameMMsg").innerHTML  !== ""){
+                        document.getElementById("nameLastnameMMsg").innerHTML = "";
+                    }
+                    
                     if(name === ""){
                         nameStatus = false;
                         nameMsg = "*Naziv diplomskog rada mora biti popunjen!";
-                        document.getElementById("nameMsg").innerHTML = nameMsg;
+                        var spanEle = document.getElementById("nameMsg");
+                        spanEle.style.color = "red";
+                        spanEle.innerHTML = nameMsg;
+                        //document.getElementById("nameMsg").innerHTML = nameMsg;
                     }if(nameLastname === ""){
                         nameLastnameStatus = false;
                         nameLastnameMsg = "*Ime i prezime moraju biti popunjeni!";
-                        document.getElementById("nameLastnameMsg").innerHTML = nameLastnameMsg;
+                        var spanEle = document.getElementById("nameLastnameMsg");
+                        spanEle.style.color = "red";
+                        spanEle.innerHTML = nameLastnameMsg;
+                        //document.getElementById("nameLastnameMsg").innerHTML = nameLastnameMsg;
                     }if(brojIndeksa === ""){
                         brojIndeksaStatus = false;
                         brojIndeksaMsg = "*Broj indeksa mora biti popunjen!!";
-                        document.getElementById("brojIndeksaMsg").innerHTML = brojIndeksaMsg;
+                        var spanEle = document.getElementById("brojIndeksaMsg");
+                        spanEle.style.color = "red";
+                        spanEle.innerHTML = brojIndeksaMsg;
+                        //document.getElementById("brojIndeksaMsg").innerHTML = brojIndeksaMsg;
                     }if(smer === ""){
                         smerStatus = false;
                         smerMsg = "*Morate izabrati smer!";
-                        document.getElementById("smerMsg").innerHTML = smerMsg;
+                        var spanEle = document.getElementById("smerMsg");
+                        spanEle.style.color = "red";
+                        spanEle.innerHTML = smerMsg;
+                        //document.getElementById("smerMsg").innerHTML = smerMsg;
                     }if(nameLastnameM === ""){
                         nameLastnameMStatus = false;
                         nameLastnameMMsg = "*Ime mentora mora biti popunjeno!";
-                        document.getElementById("nameLastnameMMsg").innerHTML = nameLastnameMMsg;
+                        var spanEle = document.getElementById("nameLastnameMMsg");
+                        spanEle.style.color = "red";
+                        spanEle.innerHTML = nameLastnameMMsg;
+                        //document.getElementById("nameLastnameMMsg").innerHTML = nameLastnameMMsg;
                     }
                     
-                if(nameStatus === false || nameLastnameStatus === false || brojIndeksaStatus === false || smerStatus === false || nameLastnameM === false){
+                if(nameStatus === false || nameLastnameStatus === false || brojIndeksaStatus === false || smerStatus === false || nameLastnameMStatus === false){
                     return false;
                 }
                 }
