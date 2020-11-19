@@ -5,6 +5,8 @@
  */
 package com.pst.szdp.controller;
 
+import com.pst.szdp.servis.DiplServis;
+import com.pst.szdp.vo.DiplVo;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -19,7 +21,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "AddDiplController", urlPatterns = {"/AddDiplController"})
 public class AddDiplController extends HttpServlet {
-   
+    DiplVo diplVo = null;
+    DiplServis diplServis = null;
+    
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException{ // get data from ui
         String name = request.getParameter("name");
@@ -28,6 +32,14 @@ public class AddDiplController extends HttpServlet {
         String smer = request.getParameter("smer");
         String nameLastnameM = request.getParameter("nameLastnameM");
         
-        System.out.println("data--"+name+" "+nameLastname+" "+brojIndeksa+" "+smer+" "+nameLastnameM);
+        diplVo = new DiplVo();
+        diplVo.setName(name);
+        diplVo.setNameLastname(nameLastname);
+        diplVo.setBrojIndeksa(brojIndeksa);
+        diplVo.setSmer(smer);
+        diplVo.setNameLastnameM(nameLastnameM);
+        
+        diplServis = new DiplServis();
+        diplServis.saveDipl(diplVo);
     }
 }
