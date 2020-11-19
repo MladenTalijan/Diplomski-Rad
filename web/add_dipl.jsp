@@ -37,7 +37,6 @@
                 var smerMsg;
                 var nameLastnameMMsg;
                     
-                    //ne radi da izbrise nakon unosa 17:54
                     if(document.getElementById("nameMsg").innerHTML  !== ""){
                         document.getElementById("nameMsg").innerHTML = "";
                     }
