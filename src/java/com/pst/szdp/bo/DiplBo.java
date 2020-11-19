@@ -1,6 +1,6 @@
-package com.pst.szdp.vo;
+package com.pst.szdp.bo;
 
-public class DiplVo {
+public class DiplBo {
     private String name;
     private String nameLastname;
     private String brojIndeksa;
